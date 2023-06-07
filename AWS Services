@@ -1,0 +1,9 @@
+    AWS services which I learn till now....
+    1) EC2-Elastic Compute Cloud [Load balancing, Target Group, Security Group]
+    2) ECS-Elastic Container Service [Task Definition, Task, Service]
+    3) Route 53
+    4) S3-Simple Storage Service + Cloudfront
+    5) Elastic Beanstalk
+    6) AWS Code Build + Code Pipeline
+    7) VPC - Subnet, Route Table, IGW (Internet Gateway), NAT Gateway
+    8)
