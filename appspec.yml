@@ -7,10 +7,10 @@ files:
 file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
-    - location: backend/scripts/install
+    - location: backend/scripts/install.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: backend/scripts/start
+    - location: backend/scripts/start.sh
       timeout: 300
       runas: root
