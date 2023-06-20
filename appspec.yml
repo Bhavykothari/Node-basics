@@ -5,10 +5,11 @@ files:
     destination: /home/ubuntu/devops-basics/backend
     overwrite: true
 hooks:
-  Install:
+  BeforeInstall:
     - location: backend/scripts/install
       timeout: 300
       runas: root
+  ApplicationStart:
     - location: backend/scripts/start
       timeout: 300
       runas: root
