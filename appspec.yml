@@ -4,6 +4,7 @@ files:
   - source: ./backend
     destination: /home/ubuntu/devops-basics/backend
     overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   Install:
     - location: backend/scripts/install
