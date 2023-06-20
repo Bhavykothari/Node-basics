@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: ./backend
+    destination: /home/ubuntu/devops-basics/backend
+hooks:
+  Install:
+    - location: backend/scripts/install
+      timeout: 300
+      runas: root
+    - location: backend/scripts/start
+      timeout: 300
+      runas: root
+
