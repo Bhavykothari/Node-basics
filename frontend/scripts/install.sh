@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/devops-basics/backend
+cd /home/ubuntu/devops-basics/frontend
 npm install
