@@ -4,111 +4,13 @@ function App() {
   return (
     <div className="app2">
       <pre>
-      version: 0.2
+      A reverse proxy is the recommended method to expose an application server to the internet. Whether you are running a Node.js application in production or a minimal built-in web server with Flask, these application servers will often bind to localhost with a TCP port. This means by default, your application will only be accessible locally on the machine it resides on. While you can specify a different bind point to force access through the internet, these application servers are designed to be served from behind a reverse proxy in production environments. This provides security benefits in isolating the application server from direct internet access, the ability to centralize firewall protection, and a minimized attack plane for common threats such as denial of service attacks.
 
-run-as: Linux-user-name
+From a client’s perspective, interacting with a reverse proxy is no different from interacting with the application server directly. It is functionally the same, and the client cannot tell the difference. A client requests a resource and then receives it, without any extra configuration required by the client.
 
-env:
-  shell: shell-tag
-  variables:
-    key: "value"
-    key: "value"
-  parameter-store:
-    key: "value"
-    key: "value"
-  exported-variables:
-    - variable
-    - variable
-  secrets-manager:
-    key: secret-id:json-key:version-stage:version-id
-  git-credential-helper: no | yes
+This tutorial will demonstrate how to set up a reverse proxy using Nginx, a popular web server and reverse proxy solution. You will install Nginx, configure it as a reverse proxy using the proxy_pass directive, and forward the appropriate headers from your client’s request. If you don’t have an application server on hand to test, you will optionally set up a test application with the WSGI server Gunicorn.
 
-proxy:
-  upload-artifacts: no | yes
-  logs: no | yes
 
-batch:
-  fast-fail: false | true
-  # build-list:
-  # build-matrix:
-  # build-graph:
-        
-phases:
-  install:
-    run-as: Linux-user-name
-    on-failure: ABORT | CONTINUE
-    runtime-versions:
-      runtime: version
-      runtime: version
-    commands:
-      - command
-      - command
-    finally:
-      - command
-      - command
-  pre_build:
-    run-as: Linux-user-name
-    on-failure: ABORT | CONTINUE
-    commands:
-      - command
-      - command
-    finally:
-      - command
-      - command
-  build:
-    run-as: Linux-user-name
-    on-failure: ABORT | CONTINUE
-    commands:
-      - command
-      - command
-    finally:
-      - command
-      - command
-  post_build:
-    run-as: Linux-user-name
-    on-failure: ABORT | CONTINUE
-    commands:
-      - command
-      - command
-    finally:
-      - command
-      - command
-reports:
-  report-group-name-or-arn:
-    files:
-      - location
-      - location
-    base-directory: location
-    discard-paths: no | yes
-    file-format: report-format
-artifacts:
-  files:
-    - location
-    - location
-  name: artifact-name
-  discard-paths: no | yes
-  base-directory: location
-  exclude-paths: excluded paths
-  enable-symlinks: no | yes
-  s3-prefix: prefix
-  secondary-artifacts:
-    artifactIdentifier:
-      files:
-        - location
-        - location
-      name: secondary-artifact-name
-      discard-paths: no | yes
-      base-directory: location
-    artifactIdentifier:
-      files:
-        - location
-        - location
-      discard-paths: no | yes
-      base-directory: location
-cache:
-  paths:
-    - path
-    - path
       </pre>
     </div>
   );
