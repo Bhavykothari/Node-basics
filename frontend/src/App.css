@@ -1,13 +1,7 @@
 .App {
   text-align: center;
   padding: 200px;
-  border: 2px solid black;
-}
-
-.app2 {
-  text-align: center;
-  padding: 200px;
-  border: 2px solid black;
+  border: 4px solid black;
 }
 
 .App-logo {

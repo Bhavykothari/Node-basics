@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000 ;
+const port = process.env.PORT || 5000 ;
 
-app.get('/hello', (req, res) => {
-  res.send('Total new code')
+app.get('/', (req, res) => {
+  res.send('Node application running')
 })
 
 app.listen(port, () => {
