@@ -1,16 +1,24 @@
 version: 0.0
 os: linux
 files:
-  - source: ./backend
-    destination: /home/ubuntu/devops-basics/backend
+  - source: ./frontend
+    destination: /home/ubuntu/devops-basics/frontend
     overwrite: true
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
+<<<<<<< HEAD
     - location: backend/scripts/install
       timeout: 300
       runas: root
   ApplicationStart:
     - location: backend/scripts/start
+=======
+    - location: frontend/scripts/install.sh
       timeout: 300
       runas: root
-
+  ApplicationStart:
+    - location: frontend/scripts/start.sh
+>>>>>>> 8296a33fe5053fe8eed599511279b8c93354b6ec
+      timeout: 300
+      runas: ubuntu

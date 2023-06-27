@@ -1,7 +1,15 @@
 .App {
   text-align: center;
+  padding: 20px;
+  border: 2px solid green;
+}
+
+.app2 {
+  text-align: center;
   padding: 200px;
-  border: 4px solid black;
+  border: 2px solid black;
+  background-color: antiquewhite;
+  >>>>>>>8296a33fe5053fe8eed599511279b8c93354b6ec
 }
 
 .App-logo {
@@ -34,6 +42,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
